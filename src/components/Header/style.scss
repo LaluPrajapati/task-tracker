@@ -1,0 +1,72 @@
+@import "../../assets/scss/responsiveUtils";
+
+.tm-header {
+  grid-template-columns: auto auto;
+  padding: 0 10px 10px;
+
+  @include media-breakpoint(sm) {
+    .header-left {
+      flex-flow: row wrap;
+      width: auto;
+    }
+  }
+
+  h2 {
+    font-weight: bold;
+    font-size: 18px;
+
+    @include media-breakpoint(sm) {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  .search {
+    position: relative;
+    max-width: 160px;
+  }
+
+  .search-field {
+    background-color: rgba(204,204,204,0.3);
+    border: 0;
+    border-radius: 20px;
+    padding: 5px 24px 5px 15px;
+    outline: none;
+    font-size: 12px;
+    max-width: 100%;
+  }
+
+  .icon {
+    display: inline-block;
+    background-size: 12px;
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 8px;
+    background-position: center;
+    position: absolute;
+    cursor: pointer;
+  }
+
+  .search-icon {
+    right: 4px;
+    top: 4px;
+  }
+
+  .header-right {
+    @include media-breakpoint(sm) {
+      .btn-with-icon {
+        padding: 0;
+        height: 22px;
+        width: 22px;
+
+        .icon {
+          top: 3px;
+          left: 3px;
+        }
+      }
+      .btn-text {
+        display: none;
+      }
+    }
+  }
+}

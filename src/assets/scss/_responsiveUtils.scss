@@ -1,0 +1,7 @@
+@import "./variables";
+
+@mixin media-breakpoint($breakpoint){
+  @media #{inspect(map-get($grid-breakpoints, $breakpoint))} {
+    @content;
+  }
+}
